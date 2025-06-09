@@ -1,38 +1,37 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "sample",
-  "title": "sample",
-  "description": "",
-  "icon": "extension-icon.png",
-  "author": "shinsi4545",
-  "owner": "tomo-local",
+  "name": "raycast-notes",
+  "title": "Quick Notes",
+  "description": "簡単にメモを取れるRaycast拡張機能",
+  "icon": "note-icon.png",
+  "author": "your-name",
+  "categories": ["Productivity"],
   "license": "MIT",
   "commands": [
     {
-      "name": "sample-1",
-      "title": "sample-1",
-      "description": "",
-      "mode": "no-view"
+      "name": "create-note",
+      "title": "create note",
+      "description": "新しいメモを作成します",
+      "mode": "view"
+    },
+    {
+      "name": "list-notes",
+      "title": "list notes",
+      "description": "保存されたメモの一覧を表示します",
+      "mode": "view"
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.99.4",
-    "@raycast/utils": "^1.17.0"
+    "@raycast/api": "^1.64.0"
   },
   "devDependencies": {
-    "@raycast/eslint-config": "^2.0.4",
-    "@types/node": "22.13.10",
-    "@types/react": "19.0.10",
-    "eslint": "^9.22.0",
-    "prettier": "^3.5.3",
-    "typescript": "^5.8.2"
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.0",
+    "typescript": "^5.3.0"
   },
   "scripts": {
-    "build": "ray build",
+    "build": "ray build -e dist",
     "dev": "ray develop",
-    "fix-lint": "ray lint --fix",
-    "lint": "ray lint",
-    "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1",
-    "publish": "npx @raycast/api@latest publish"
+    "lint": "ray lint"
   }
 }
