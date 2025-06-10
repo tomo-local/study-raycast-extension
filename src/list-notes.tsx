@@ -1,6 +1,6 @@
 import { ActionPanel, Action, List, showToast, Toast } from "@raycast/api";
 import { useState, useEffect } from "react";
-import { loadNotes as loadNotesFromFile, Note } from "../utils/notes";
+import { loadNotes as loadNotesFromFile, Note } from "./utils/notes";
 import path from "path";
 import os from "os";
 

@@ -11,19 +11,11 @@ export default function EditTextModal({ title, value, onSubmit }: EditTextModalP
     <Form
       actions={
         <ActionPanel>
-          <Action.SubmitForm
-            title="保存"
-            onSubmit={(values) => onSubmit(values.text)}
-          />
+          <Action.SubmitForm title="プレビュー" onSubmit={(values) => onSubmit(values.text)} />
         </ActionPanel>
       }
     >
-      <Form.TextArea
-        id="text"
-        title={title}
-        defaultValue={value}
-        autoFocus
-      />
+      <Form.TextArea id="text" title={title} defaultValue={value} autoFocus />
     </Form>
   );
 }

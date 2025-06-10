@@ -5,14 +5,23 @@
   "description": "簡単にメモを取れるRaycast拡張機能",
   "icon": "note-icon.png",
   "author": "your-name",
-  "categories": ["Productivity"],
+  "categories": [
+    "Productivity"
+  ],
   "license": "MIT",
   "commands": [
     {
       "name": "create-note",
       "title": "create note",
       "description": "新しいメモを作成します",
-      "mode": "view"
+      "mode": "view",
+      "arguments": [
+        {
+          "name": "title",
+          "type": "text",
+          "placeholder": "ファイル名を入力"
+        }
+      ]
     },
     {
       "name": "list-notes",
